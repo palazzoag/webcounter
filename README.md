@@ -1,17 +1,17 @@
 # Webcounter
-
+By André
 Simple Python Webcounter with redis server
 
 ## Manual operations
 
 ### Build
-    docker build -t cfreire70/webcounter:latest .
+    docker build -t palazzag/webcounter:latest .
 
 ### Dependencies
     docker run -d  --name redis --rm redis:alpine
 
 ### Run
-    docker run -d --rm -p8000:5000 --name webcounter --link redis -e REDIS_URL=redis cfreire70/webcounter:latest
+    docker run -d --rm -p8000:5000 --name webcounter --link redis -e REDIS_URL=redis palazzag/webcounter:latest
 
 
 ## Docker Playground example
@@ -25,7 +25,7 @@ Simple Python Webcounter with redis server
 gitlab-runner register -n \
 --url https://gitlab.com/ \
 --executor shell \
---description "docker-cfreire" \
+--description "docker-palazzag" \
 --tag-list "develop" \
 --registration-token GR1348941KAhwZxv_Urp5TjKzt6ep
 
